@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Salvador Galdino - Portfólio</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body, html {
+      font-family: 'Arial', sans-serif;
+      height: 100%;
+      overflow-x: hidden;
+    }
+    body {
+      background: linear-gradient(270deg, #00f0ff, #007bff, #00f0ff);
+      background-size: 600% 600%;
+      animation: gradientBackground 15s ease infinite;
+      color: #fff;
+    }
+    @keyframes gradientBackground {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    header {
+      background: rgba(0, 0, 0, 0.85);
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header h1 {
+      color: #00f0ff;
+      font-size: 28px;
+    }
+    nav a {
+      color: #fff;
+      margin-left: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+      font-size: 18px;
+    }
+    nav a:hover {
+      color: #00f0ff;
+    }
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+    #inicio img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #00f0ff;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
+      animation: smoothFloat 4s infinite ease-in-out;
+      transform-style: preserve-3d;
+    }
+    @keyframes smoothFloat {
+      0% { transform: rotateY(0deg) rotateX(0deg) translateY(0px); }
+      25% { transform: rotateY(15deg) rotateX(8deg) translateY(-10px); }
+      50% { transform: rotateY(0deg) rotateX(0deg) translateY(0px); }
+      75% { transform: rotateY(-15deg) rotateX(-8deg) translateY(10px); }
+      100% { transform: rotateY(0deg) rotateX(0deg) translateY(0px); }
+    }
+    #typing, #typingSobre {
+      font-size: 22px;
+      color: #ffffff;
+      margin-top: 15px;
+      height: 30px;
+      min-height: 30px;
+    }
+    section h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    section p {
+      font-size: 20px;
+      max-width: 800px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+    }
+    .habilidades {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .habilidade {
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+      padding: 25px;
+      width: 140px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      transition: transform 0.3s, background 0.3s;
+    }
+    .habilidade:hover {
+      transform: translateY(-10px);
+      background: rgba(0, 0, 0, 0.4);
+    }
+    .habilidade img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 15px;
+      animation: girar 8s linear infinite;
+      transform-style: preserve-3d;
+    }
+    @keyframes girar {
+      0% { transform: rotateY(0deg) rotateX(0deg); }
+      50% { transform: rotateY(180deg) rotateX(180deg); }
+      100% { transform: rotateY(360deg) rotateX(360deg); }
+    }
+    .projetos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .projeto {
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+      padding: 20px;
+      width: 280px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      transition: transform 0.3s, background 0.3s;
+    }
+    .projeto:hover {
+      transform: scale(1.05);
+      background: rgba(0, 0, 0, 0.4);
+    }
+    .contato a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 25px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 18px;
+      transition: background 0.3s;
+    }
+    .instagram {
+      background: #E1306C;
+      color: #fff;
+    }
+    .github {
+      background: #333;
+      color: #fff;
+    }
+    .contato a:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Salvador G.</h1>
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<section id="inicio">
+  <img src="https://i.imgur.com/TRcShT8.png" alt="Salvador Galdino">
+  <h2>Salvador Galdino</h2>
+  <div id="typing"></div>
+</section>
+
+<section id="sobre">
+  <h2>Sobre Mim</h2>
+  <div id="typingSobre"></div>
+</section>
+
+<section id="habilidades">
+  <h2>Habilidades</h2>
+  <div class="habilidades">
+    <div class="habilidade">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+      <p>HTML5</p>
+    </div>
+    <div class="habilidade">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+      <p>CSS3</p>
+    </div>
+    <div class="habilidade">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+      <p>JavaScript</p>
+    </div>
+    <div class="habilidade">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React.js">
+      <p>React.js</p>
+    </div>
+  </div>
+</section>
+
+<section id="projetos">
+  <h2>Projetos</h2>
+  <div class="projetos">
+    <div class="projeto">
+      <h3>Clone Instagram</h3>
+      <p>Projeto Front-End com HTML, CSS e JavaScript.</p>
+    </div>
+    <div class="projeto">
+      <h3>Calculadora</h3>
+      <p>Projeto funcional de calculadora com JavaScript puro.</p>
+    </div>
+    <div class="projeto">
+      <h3>Portfólio Profissional</h3>
+      <p>Este site incrível feito com muito carinho! ❤️</p>
+    </div>
+  </div>
+</section>
+
+<section id="contato">
+  <h2>Contato</h2>
+  <p>Email: salvadorgaldinogomes92@gmail.com</p>
+  <div class="contato">
+    <a class="instagram" href="https://www.instagram.com/consultor_salvador/" target="_blank">Instagram</a>
+    <a class="github" href="https://github.com/SalvadorGaldino" target="_blank">GitHub</a>
+  </div>
+</section>
+
+<script>
+  // Animação de digitação 1
+  const textoInicio = "Aprendendo Front-End com paixão! 🚀";
+  let i = 0;
+  function digitarInicio() {
+    if (i < textoInicio.length) {
+      document.getElementById("typing").innerHTML += textoInicio.charAt(i);
+      i++;
+      setTimeout(digitarInicio, 100);
+    }
+  }
+
+  // Animação de digitação 2
+  const textoSobre = "Olá! Me chamo Salvador Galdino, apaixonado por tecnologia, aprendendo Front-End e inglês para evoluir!";
+  let j = 0;
+  function digitarSobre() {
+    if (j < textoSobre.length) {
+      document.getElementById("typingSobre").innerHTML += textoSobre.charAt(j);
+      j++;
+      setTimeout(digitarSobre, 60);
+    }
+  }
+
+  window.onload = function() {
+    digitarInicio();
+    setTimeout(digitarSobre, 3000); // Começar sobre depois de 3 segundos
+  }
+</script>
+
+</body>
+</html>
